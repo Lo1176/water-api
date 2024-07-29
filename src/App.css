@@ -5,6 +5,10 @@
   text-align: center;
 }
 
+p {
+  margin: 0;
+}
+
 .logo {
   height: 6em;
   padding: 1.5em;
@@ -39,4 +43,11 @@
 
 .read-the-docs {
   color: #888;
+}
+
+.water-results {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 44px;
+  gap: 12px;
 }

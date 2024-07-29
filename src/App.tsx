@@ -8,7 +8,7 @@ function App() {
   const [waterResults, setWaterResults] = useState<WaterResult[]>([]);
   console.log('🚀 ~ App ~ waterResults:', waterResults);
 
-  const selectedCity = 'paris';
+  const selectedCity = 'cozzano';
   const selectedLimit = '5';
 
   useEffect(() => {
@@ -37,17 +37,23 @@ function App() {
       <h1>Water Results</h1>
       {waterResults.length !== 0 && (
         <ul>
-          <div style={{ marginBottom: '44px' }}>
+          <div className='water-results'>
             <h3>
               Commune de {waterResults[0].nom_commune} -{' '}
               {waterResults[0].nom_departement}
             </h3>
-            <strong>Conclusion des prélèvements : </strong>
-            <i>{waterResults[0].conclusion_conformite_prelevement}</i>
-            <strong>Date de prélèvement : </strong>
-            <i>{formatDate(waterResults[0].date_prelevement)}</i>
-            <strong>libellé paramètres: </strong>
-            <i>{waterResults[0].libelle_parametre}</i>
+            <div>
+              <strong>Conclusion des prélèvements : </strong>
+              <i>{waterResults[0].conclusion_conformite_prelevement}</i>
+            </div>
+            <div>
+              <strong>Date de prélèvement : </strong>
+              <i>{formatDate(waterResults[0].date_prelevement)}</i>
+            </div>
+            <div>
+              <strong>libellé paramètres: </strong>
+              <i>{waterResults[0].libelle_parametre}</i>
+            </div>
           </div>
         </ul>
       )}
